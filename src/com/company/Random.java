@@ -3,14 +3,13 @@ package com.company;
 /**
  * Created by zr162 on 10/10/16.
  */
-import java.util.*;
+
 public class Random {
 
     public String name;
     public boolean sq;
-    public double randSQ;
+    public int randSQ;
     public double root;
- public Random con=new Random;
 
     public Random(String name)
     {
@@ -18,20 +17,25 @@ public class Random {
         sq=false;
 
 
+
     }
 
-    public double getRandSQ()
+    public int getRandSQ()
     {
-        randSQ=
+        while (sq) {
+            randSQ = (int)(Math.random() * 10800000);
+            root=Math.sqrt(randSQ);
+            if (root==(int)root){
+                sq=true;
+            }
+
+        }
+
+        return randSQ;
     }
 
-    private boolean pSquare(double i){
-        if (i==(int)i)
-            sq=true;
-        else
-            sq=false;
-        return sq;
-    }
+
+
 
 
 }
