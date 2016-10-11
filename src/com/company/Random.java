@@ -7,29 +7,24 @@ package com.company;
 public class Random {
 
     public String name;
-    public boolean sq;
-    public double randSQ;
-    public double root;
+
+    public int randSQ;
 
     public Random(String name)
     {
         this.name=name;
-        sq=false;
+
 
 
 
     }
 
-    public double getRandSQ()
+    public int perfectRandom()
     {
-        while (sq) {
-            randSQ = Math.random()*10800000;
-            root=Math.sqrt(randSQ);
-            if (root==(int)root){
-                sq=true;
-            }
 
-        }
+            randSQ = (int)Math.pow(((int)(Math.random()*100)),2);
+        //I used a double value to stor the square root and check that this section worked properly
+
 
         return randSQ;
     }
