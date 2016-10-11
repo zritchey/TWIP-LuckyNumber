@@ -8,7 +8,7 @@ public class Random {
 
     public String name;
     public boolean sq;
-    public int randSQ;
+    public double randSQ;
     public double root;
 
     public Random(String name)
@@ -20,10 +20,10 @@ public class Random {
 
     }
 
-    public int getRandSQ()
+    public double getRandSQ()
     {
         while (sq) {
-            randSQ = (int)(Math.random() * 10800000);
+            randSQ = Math.random()*10800000;
             root=Math.sqrt(randSQ);
             if (root==(int)root){
                 sq=true;

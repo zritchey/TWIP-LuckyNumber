@@ -10,7 +10,7 @@ public class Main {
             Scanner kb = new Scanner(System.in);
             String name = kb.nextLine();
             Random rand1 = new Random(name);
-            int squareFind = rand1.getRandSQ();
+            double squareFind = rand1.getRandSQ();
             while (rand1.name.trim().length()==0){
                 System.out.print("Please enter your name: ");
                 rand1.name=kb.nextLine();
